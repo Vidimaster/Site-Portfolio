@@ -1,0 +1,75 @@
+body {
+    margin: auto;
+    width: 80%;
+    background: #020024;
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 22%, rgba(0, 212, 255, 1) 100%);
+}
+
+h1 {
+    text-align: center;
+    margin: 0px;
+    color: white;
+}
+
+header {
+    height: 200px;
+    background-color: #040231;
+    padding-top: 36px;
+}
+
+footer {
+    height: 200px;
+    background-color: #040231;
+    padding-top: 36px;
+}
+
+.content {
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 24px;
+    padding: 12px;
+}
+
+.element>img {
+    width: 128px;
+}
+
+p {
+    margin: 0px;
+}
+
+.element {
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 4px 4px 8px 0px rgba(18, 34, 242, 0.2);
+    transition: transform 0.3s ease-out;
+}
+
+.element:hover {
+    box-shadow: 4px 4px 8px 0px rgba(18, 34, 242, 0.2);
+    transform: translateX(4px) translateY(4px) scale(1.1);
+}
+
+.fade-in-element {
+    animation-name: fadeIn;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

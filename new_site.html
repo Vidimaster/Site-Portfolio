@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Мой сайт-портфолио</h1>
+    </header>
+    <div class="content">
+        <div class="element">
+            <img src="../New Site/img/1.PNG" alt="">
+            <p>Смартфон тегами HTML, стилями CSS</p>
+        </div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+    </div>
+    <footer></footer>
+</body>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const elements = document.getElementsByClassName('element');
+        for (let index = 0; index < elements.length; index++) {
+            elements[index].classList.add('fade-in-element');
+            elements[index].style.animationDuration = (Math.floor(Math.random() * 4)).toString() + "s";
+            elements[index].addEventListener('animationend', () => {
+                elements[index].classList.remove('fade-in-element');
+            }, { once: true });
+
+        }
+
+    })
+</script>
+
+</html>
